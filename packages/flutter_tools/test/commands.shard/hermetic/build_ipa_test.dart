@@ -1749,17 +1749,25 @@ void main() {
       expect(
         logger.errorText,
         contains(
-          'It appears that there was a problem signing your application prior to installation on the device.',
+          'Error: could not code sign the application.',
         ),
       );
       expect(
         logger.errorText,
-        contains('Verify that the Bundle Identifier in your project is your signing id in Xcode'),
+        contains('To resolve this issue, try the following steps:'),
       );
       expect(logger.errorText, contains('open ios/Runner.xcworkspace'));
       expect(
         logger.errorText,
-        contains("Also try selecting 'Product > Build' to fix the problem."),
+        contains('In Runner > Signing & Capabilities, verify:'),
+      );
+      expect(
+        logger.errorText,
+        contains('In Xcode Settings > Accounts, verify the correct Apple Developer account is added'),
+      );
+      expect(
+        logger.errorText,
+        contains("Run Product > Build and fix any code signing issues shown by Xcode."),
       );
       expect(fakeProcessManager, hasNoRemainingExpectations);
     },
