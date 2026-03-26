@@ -1127,9 +1127,12 @@ Future<bool> _handleIssues(
     logger.printError('     open ios/Runner.xcworkspace');
     logger.printError('  2. In Runner > Signing & Capabilities, verify:');
     logger.printError(
-      '     - Team is selected and valid for your Apple Developer account',
+      '     - Team is set to a valid Apple Developer account',
     );
-    logger.printError('     - Bundle Identifier matches your provisioning profile');
+    logger.printError(
+      '     - Bundle Identifier is correct for your app (with automatic signing, '
+      'Xcode manages the provisioning profile)',
+    );
     logger.printError('  3. In Xcode Settings > Accounts, verify the correct Apple Developer account is added');
     logger.printError('');
     logger.printError("  4. Run Product > Build and fix any code signing issues shown by Xcode.");
