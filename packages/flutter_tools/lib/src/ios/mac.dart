@@ -1129,9 +1129,12 @@ Future<bool> _handleIssues(
     logger.printError(
       '     - Team is set to a valid Apple Developer account',
     );
+    logger.printError('     - Bundle Identifier is correct for your app');
     logger.printError(
-      '     - Bundle Identifier is correct for your app (with automatic signing, '
-      'Xcode manages the provisioning profile)',
+      '     - If Automatically manage signing is enabled, Xcode manages the provisioning profile',
+    );
+    logger.printError(
+      '     - If manual signing is used, the provisioning profile matches the Bundle Identifier',
     );
     logger.printError('  3. In Xcode Settings > Accounts, verify the correct Apple Developer account is added');
     logger.printError('');
