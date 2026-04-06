@@ -69,7 +69,7 @@ class InlineSpanSemanticsInformation {
     this.stringAttributes = const <ui.StringAttribute>[],
     this.recognizer,
     this.tooltip,
-  }) : assert(!isPlaceholder || (text == '\uFFFC' && semanticsLabel == null && recognizer == null)),
+  }) : assert(!isPlaceholder || (text == '\uFFFC' && semanticsLabel == null && recognizer == null && tooltip == null)),
        requiresOwnNode = isPlaceholder || recognizer != null || semanticsIdentifier != null || tooltip != null;
 
   /// The text info for a [PlaceholderSpan].
