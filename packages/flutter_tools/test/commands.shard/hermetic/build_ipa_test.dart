@@ -1746,24 +1746,15 @@ void main() {
       );
 
       expect(logger.errorText, contains('Some Provisioning profile issue.'));
+      expect(logger.errorText, contains('Error: could not code sign the application.'));
+      expect(logger.errorText, contains('To resolve this issue, try the following steps:'));
+      expect(logger.errorText, contains('open ios/Runner.xcworkspace'));
+      expect(logger.errorText, contains('In Runner > Signing & Capabilities, verify:'));
       expect(
         logger.errorText,
         contains(
-          'Error: could not code sign the application.',
+          'In Xcode Settings > Accounts, verify the correct Apple Developer account is added',
         ),
-      );
-      expect(
-        logger.errorText,
-        contains('To resolve this issue, try the following steps:'),
-      );
-      expect(logger.errorText, contains('open ios/Runner.xcworkspace'));
-      expect(
-        logger.errorText,
-        contains('In Runner > Signing & Capabilities, verify:'),
-      );
-      expect(
-        logger.errorText,
-        contains('In Xcode Settings > Accounts, verify the correct Apple Developer account is added'),
       );
       expect(
         logger.errorText,

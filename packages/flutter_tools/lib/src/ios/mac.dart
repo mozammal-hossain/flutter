@@ -1129,9 +1129,7 @@ Future<bool> _handleIssues(
     logger.printError('  1. Open the project in Xcode:');
     logger.printError('     open ios/Runner.xcworkspace');
     logger.printError('  2. In Runner > Signing & Capabilities, verify:');
-    logger.printError(
-      '     - Team is set to a valid Apple Developer account',
-    );
+    logger.printError('     - Team is set to a valid Apple Developer account');
     logger.printError('     - Bundle Identifier is correct for your app');
     logger.printError(
       '     - If Automatically manage signing is enabled, Xcode manages the provisioning profile',
@@ -1139,7 +1137,9 @@ Future<bool> _handleIssues(
     logger.printError(
       '     - If manual signing is used, the provisioning profile matches the Bundle Identifier',
     );
-    logger.printError('  3. In Xcode Settings > Accounts, verify the correct Apple Developer account is added');
+    logger.printError(
+      '  3. In Xcode Settings > Accounts, verify the correct Apple Developer account is added',
+    );
     logger.printError('');
     logger.printError("  4. Run Product > Build and fix any code signing issues shown by Xcode.");
   } else if (missingPlatform != null) {

@@ -1159,21 +1159,10 @@ void main() {
         );
 
         expect(logger.errorText, contains('Some Provisioning profile issue.'));
-        expect(
-          logger.errorText,
-          contains(
-            'Error: could not code sign the application.',
-          ),
-        );
-        expect(
-          logger.errorText,
-          contains('To resolve this issue, try the following steps:'),
-        );
+        expect(logger.errorText, contains('Error: could not code sign the application.'));
+        expect(logger.errorText, contains('To resolve this issue, try the following steps:'));
         expect(logger.errorText, contains('open ios/Runner.xcworkspace'));
-        expect(
-          logger.errorText,
-          contains('In Runner > Signing & Capabilities, verify:'),
-        );
+        expect(logger.errorText, contains('In Runner > Signing & Capabilities, verify:'));
         expect(
           logger.errorText,
           contains(
@@ -1665,14 +1654,7 @@ Runner requires a provisioning profile. Select a provisioning profile in the Sig
         );
 
         expect(logger.errorText, contains(noDevelopmentTeamInstruction));
-        expect(
-          logger.errorText,
-          isNot(
-            contains(
-              'Error: could not code sign the application.',
-            ),
-          ),
-        );
+        expect(logger.errorText, isNot(contains('Error: could not code sign the application.')));
       },
       overrides: <Type, Generator>{
         FileSystem: () => fileSystem,
