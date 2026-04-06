@@ -1141,7 +1141,7 @@ Future<bool> _handleIssues(
       '  3. In Xcode Settings > Accounts, verify the correct Apple Developer account is added',
     );
     logger.printError('');
-    logger.printError("  4. Run Product > Build and fix any code signing issues shown by Xcode.");
+    logger.printError('  4. Run Product > Build and fix any code signing issues shown by Xcode.');
   } else if (missingPlatform != null) {
     logger.printError(missingPlatformInstructions(missingPlatform), emphasis: true);
   } else if (swiftPackageManagerMinPlatformMismatchMessage != null) {

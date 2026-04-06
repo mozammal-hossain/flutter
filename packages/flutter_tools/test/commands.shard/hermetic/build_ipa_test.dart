@@ -1758,7 +1758,7 @@ void main() {
       );
       expect(
         logger.errorText,
-        contains("Run Product > Build and fix any code signing issues shown by Xcode."),
+        contains('Run Product > Build and fix any code signing issues shown by Xcode.'),
       );
       expect(fakeProcessManager, hasNoRemainingExpectations);
     },
