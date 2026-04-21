@@ -1622,7 +1622,7 @@ void main() {
       return true;
     });
     expect(children.length, 2);
-    final data = children[1].getSemanticsData();
+    final SemanticsData data = children[1].getSemanticsData();
     expect(data.tooltip, 'tap tooltip');
     expect(data.label, 'link');
     expect(data.hasAction(SemanticsAction.tap), true);

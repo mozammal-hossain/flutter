@@ -544,7 +544,7 @@ void main() {
       const InlineSpanSemanticsInformation('hover me', tooltip: 'a tooltip'),
       const InlineSpanSemanticsInformation(' after'),
     ];
-    final combined = combineSemanticsInfo(infoList);
+    final List<InlineSpanSemanticsInformation> combined = combineSemanticsInfo(infoList);
     expect(combined.length, 3);
     expect(combined[0].text, 'before ');
     expect(combined[0].requiresOwnNode, isFalse);
